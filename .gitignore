@@ -1,0 +1,8 @@
+*Debug
+*.obj
+*.log
+*.tlog
+*.exe
+*.vs*
+task2/.vs/task2/v15/Browse.VC.db
+task2/.vs/task2/v15/.suo
