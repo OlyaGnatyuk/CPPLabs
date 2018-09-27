@@ -15,3 +15,8 @@ Ukazateli/chetnieVmestoNechetnih/chetnieVmestoNechetnih/pch.h
 task2/.vs/task2/v15/.suo
 task2/.vs/task2/v15/Browse.VC.db
 task2/.vs/task2/v15/.suo
+task2/task2/task2.vcxproj
+task2/task2/pch.cpp
+task2/task2.sln
+task2/task2/task2.vcxproj.filters
+task2/task2/pch.h
