@@ -20,3 +20,11 @@ task2/task2/pch.cpp
 task2/task2.sln
 task2/task2/task2.vcxproj.filters
 task2/task2/pch.h
+task3/fibonachi/fibonachi.sln
+task3/fibonachi/fibonachi/fibonachi.cpp
+task3/fibonachi/fibonachi/fibonachi.vcxproj
+task3/fibonachi/fibonachi/fibonachi.vcxproj.filters
+task3/fibonachi/fibonachi/pch.cpp
+task3/fibonachi/fibonachi/pch.h
+task2/.vs/task2/v15/Browse.VC.db
+task2/.vs/task2/v15/Browse.VC.db
