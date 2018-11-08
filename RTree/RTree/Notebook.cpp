@@ -5,52 +5,58 @@ using namespace std;
 
 Notebook::Notebook()
 {
-	head = NULL;
+	head = new Node();
 }
 
-int Notebook::SearchLetter(Node* headNode, char* searchString, int chPoz)
+int Notebook::SearchLetter(Node* node, char* searchString, int chPoz)
 {
 	int ch = searchString[chPoz];
-	if (headNode == NULL) return 0;
-	if (ch == 0)
+	if (node == NULL) return 0;
+	int nextCharPosition = chPoz + 1;
+	int nextChar = searchString[nextCharPosition];
+	if (nextChar == 0)
 	{
-		return headNode->numberOfWords;
+		return node->numberOfWords;
 	}
-	return SearchLetter(headNode->next[ch], searchString, chPoz + 1);
+	return SearchLetter(node->next[nextChar], searchString, nextCharPosition);
 }
 
-void Notebook::InsertLetter(Node** headNode, char* word, int chPoz)
+void Notebook::InsertLetter(Node** node, char* word, int chPoz)
 {
-	bool isEnd = false;
 	int ch = word[chPoz];
 	if (ch == 0)
 	{
-		if ((*headNode) != NULL)
-		{
-			(*headNode)->setIsEnd(true);
-		}
 		return;
 	}
-	if ((*headNode) == NULL)
+	if ((*node) == NULL)
 	{
-		(*headNode) = new Node;
+		(*node) = new Node;
 	}
 	else
 	{
-		(*headNode)->numberOfWords++;
+		(*node)->numberOfWords++;
 	}
-	InsertLetter(&((*headNode)->next[ch]), word, chPoz + 1);
+	
+	int nextCharPosition = chPoz + 1;
+	int nextChar = word[nextCharPosition];
+	if (nextChar == 0)
+	{
+		(*node)->setIsEnd(true);
+	}
+	InsertLetter(&((*node)->next[nextChar]), word, nextCharPosition);
 }
 
 
 int Notebook::Search(char* searchString)
 {
-	return SearchLetter(head, searchString, 0);
+	int firstChar = searchString[0];
+	return SearchLetter(head->next[firstChar], searchString, 0);
 }
 
 void Notebook::Insert(char* newWord)
 {
-	InsertLetter(&head, newWord, 0);
+	int firstChar = newWord[0];
+	InsertLetter(&(head->next[firstChar]), newWord, 0);
 }
 
 void Notebook::ShowUsage()
