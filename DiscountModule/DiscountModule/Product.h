@@ -9,15 +9,13 @@ class  Product
 public:
 	Product(string name, double price);
 	bool getIsDiscountApplied();
-	void setIsDiscountApplied(bool applied);
 	double getPriceWithDiscount();
 	void applyDiscountPercentage(double percentage);
-
+	string getName();
 private:
 	string name;
 	double price;
 	double priceWithDiscount;
-	bool isDiscountApplied;
 };
 
 #endif

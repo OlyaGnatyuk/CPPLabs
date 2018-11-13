@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="cart.h" />
+    <ClInclude Include="Discount.h" />
     <ClInclude Include="DiscountForProductSet.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="product.h" />

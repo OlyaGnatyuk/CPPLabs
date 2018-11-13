@@ -2,6 +2,7 @@
 #define CART_H
 #include <vector>
 #include "Product.h"
+#include "Discount.h"
 
 using namespace std;
 
@@ -9,11 +10,12 @@ class Cart
 {
 public:
 	Cart();
-	~Cart();
+	void addProduct(Product* newProduct);
+	void addDiscount(IDiscount & discount);
 	double getTotal();
-	vector<Product> getProductsWithoutDiscount();
+	vector<Product*> getProductsWithoutDiscount();
 private:
-	vector<Product> products;
+	vector<Product*> products;
 };
 
 #endif

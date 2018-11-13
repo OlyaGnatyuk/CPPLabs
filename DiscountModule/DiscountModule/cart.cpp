@@ -3,12 +3,17 @@
 
 Cart::Cart()
 {
-	products = vector<Product>();
+	products = vector<Product*>();
 }
 
-Cart::~Cart()
+void Cart::addProduct(Product* newProduct)
 {
-	
+	products.push_back(newProduct);
+}
+
+void Cart::addDiscount(IDiscount & discount)
+{
+	discount.applyToProducs(getProductsWithoutDiscount());
 }
 
 double Cart::getTotal()
@@ -16,18 +21,18 @@ double Cart::getTotal()
 	double total = 0.0;
 	for (auto &singleProduct : products)
 	{
-		total += singleProduct.getPriceWithDiscount();
+		total += (*singleProduct).getPriceWithDiscount();
 	}
 	return total;
 }
 
-vector<Product> Cart::getProductsWithoutDiscount()
+vector<Product*> Cart::getProductsWithoutDiscount()
 {
-	vector<Product> productsWithoutDiscount = vector<Product>();
+	vector<Product*> productsWithoutDiscount = vector<Product*>();
 
 	for (auto &singleProduct : products)
 	{
-		if (!singleProduct.getIsDiscountApplied)
+		if (!(*singleProduct).getIsDiscountApplied())
 		{
 			productsWithoutDiscount.push_back(singleProduct);
 		}
