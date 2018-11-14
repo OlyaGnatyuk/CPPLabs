@@ -32,7 +32,7 @@ vector<Product*> Cart::getProductsWithoutDiscount()
 
 	for (auto &singleProduct : products)
 	{
-		if (!(*singleProduct).getIsDiscountApplied())
+		if (!(*singleProduct).getWasDiscountApplied())
 		{
 			productsWithoutDiscount.push_back(singleProduct);
 		}

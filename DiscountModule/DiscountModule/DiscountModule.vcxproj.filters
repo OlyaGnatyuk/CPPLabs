@@ -30,6 +30,9 @@
     <ClInclude Include="Discount.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="DiscountWithDependency.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -45,6 +48,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="DiscountForProductSet.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="DiscountWithDependency.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

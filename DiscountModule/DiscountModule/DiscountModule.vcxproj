@@ -154,6 +154,7 @@
     <ClInclude Include="cart.h" />
     <ClInclude Include="Discount.h" />
     <ClInclude Include="DiscountForProductSet.h" />
+    <ClInclude Include="DiscountWithDependency.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="product.h" />
   </ItemGroup>
@@ -161,6 +162,7 @@
     <ClCompile Include="cart.cpp" />
     <ClCompile Include="DiscountForProductSet.cpp" />
     <ClCompile Include="DiscountModule.cpp" />
+    <ClCompile Include="DiscountWithDependency.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
