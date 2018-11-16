@@ -153,6 +153,7 @@
   <ItemGroup>
     <ClInclude Include="cart.h" />
     <ClInclude Include="Discount.h" />
+    <ClInclude Include="DiscountForNumberOfProducts.h" />
     <ClInclude Include="DiscountForProductSet.h" />
     <ClInclude Include="DiscountWithDependency.h" />
     <ClInclude Include="pch.h" />
@@ -160,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="cart.cpp" />
+    <ClCompile Include="DiscountForNumberOfProducts.cpp" />
     <ClCompile Include="DiscountForProductSet.cpp" />
     <ClCompile Include="DiscountModule.cpp" />
     <ClCompile Include="DiscountWithDependency.cpp" />

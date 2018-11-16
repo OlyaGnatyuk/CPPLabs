@@ -21,28 +21,25 @@ void DiscountWithDependency::setPercentage(double newPercentage)
 	percentage = newPercentage;
 }
 
-int DiscountWithDependency::evaluateNumberOfMainProducts(vector<Product*> products)
+void DiscountWithDependency::saveMainProducts(vector<Product*> products)
 {
-	int numberOfMainProducts = 0;
 	for (auto &singleProduct : products)
 	{
 		if (mainProduct.equals(singleProduct))
 		{
-			numberOfMainProducts++;
+			mainProducts.push_back(singleProduct);
 		}
 	}
-
-	return numberOfMainProducts;
 }
 
 void DiscountWithDependency::applyToProducs(vector<Product*> products)
 {
 	
-	int numberOfMainProducts = evaluateNumberOfMainProducts(products);
+	saveMainProducts(products);
 
 	for (auto &singleProduct : products)
 	{
-		if (numberOfMainProducts == 0)
+		if (mainProducts.size() == 0)
 		{
 			break;
 		}
@@ -51,8 +48,13 @@ void DiscountWithDependency::applyToProducs(vector<Product*> products)
 		{
 			if (dependentProduct.equals(singleProduct))
 			{
-				numberOfMainProducts--;
+				mainProducts.pop_back();
 				(*singleProduct).applyDiscountPercentage(percentage);
+			}
+
+			if (mainProducts.size() == 0)
+			{
+				break;
 			}
 		}
 	}

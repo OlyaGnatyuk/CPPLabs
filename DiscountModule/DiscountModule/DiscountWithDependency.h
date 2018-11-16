@@ -15,7 +15,8 @@ public:
 private:
 	Product mainProduct;
 	vector<Product> dependentProducts;
+	vector<Product*> mainProducts;
 	double percentage;
-	int evaluateNumberOfMainProducts(vector<Product*> products);
+	void saveMainProducts(vector<Product*> products);
 };
 
