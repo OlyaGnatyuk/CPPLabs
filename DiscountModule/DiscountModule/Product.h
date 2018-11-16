@@ -8,6 +8,7 @@ class  Product
 {
 public:
 	Product(string name, double price);
+	Product();
 	double getPriceWithDiscount();
 	void applyDiscountPercentage(double percentage);
 	string getName();

@@ -9,6 +9,10 @@ Product::Product(string newName, double newPrice)
 	wasDiscountApplied = false;
 }
 
+Product::Product()
+{
+}
+
 double Product::getPriceWithDiscount()
 {
 	return priceWithDiscount;

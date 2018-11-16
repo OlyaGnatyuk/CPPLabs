@@ -8,7 +8,7 @@ class DiscountForProductSet : public IDiscount
 public:
 	DiscountForProductSet();
 	void addProduct(Product product);
-	void setPercentage(double newPercentage);
+	void setPercentage(double newPercentage) override;
 	void applyToProducs(vector<Product*> products) override;
 private:
 	map<string, int> productCounters;
